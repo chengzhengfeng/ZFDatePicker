@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4AE39B516B0DC006859DBAAF /* ZFDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZFDatePicker.podspec; path = ../ZFDatePicker.podspec; sourceTree = "<group>"; };
+		4AE39B516B0DC006859DBAAF /* ZFDatePicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZFDatePicker.podspec; path = ../ZFDatePicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		53EB84146E54411554431388 /* Pods_ZFDatePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZFDatePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* ZFDatePicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFDatePicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,8 +60,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A1DDD57BC2241630EF8B4CF6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		AD03915E6A5ED11875507DA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A1DDD57BC2241630EF8B4CF6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		AD03915E6A5ED11875507DA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B7BE11FA43E68E93A6364D34 /* Pods-ZFDatePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFDatePicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZFDatePicker_Example/Pods-ZFDatePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E0534890ADF2A40066352155 /* Pods-ZFDatePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFDatePicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZFDatePicker_Example/Pods-ZFDatePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F4C9403000B6EB8BB03F4E45 /* Pods-ZFDatePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFDatePicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZFDatePicker_Tests/Pods-ZFDatePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };

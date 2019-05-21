@@ -1,0 +1,16 @@
+PODS:
+  - ZFDatePicker (0.1.0)
+
+DEPENDENCIES:
+  - ZFDatePicker (from `../`)
+
+EXTERNAL SOURCES:
+  ZFDatePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZFDatePicker: 92e615067d13e6396517d322d55159437ee27879
+
+PODFILE CHECKSUM: de23dc0b28c53fcc9dce4b17207c35f8af92892d
+
+COCOAPODS: 1.5.3

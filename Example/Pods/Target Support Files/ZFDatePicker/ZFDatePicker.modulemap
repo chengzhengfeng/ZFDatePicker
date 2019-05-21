@@ -1,0 +1,6 @@
+framework module ZFDatePicker {
+  umbrella header "ZFDatePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
