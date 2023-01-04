@@ -247,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "631781190@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = K23K7GWEC2;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -257,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -497,6 +501,7 @@
 			baseConfigurationReference = E0534890ADF2A40066352155 /* Pods-ZFDatePicker_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K23K7GWEC2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFDatePicker/ZFDatePicker-Prefix.pch";
 				INFOPLIST_FILE = "ZFDatePicker/ZFDatePicker-Info.plist";
@@ -512,6 +517,7 @@
 			baseConfigurationReference = B7BE11FA43E68E93A6364D34 /* Pods-ZFDatePicker_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K23K7GWEC2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZFDatePicker/ZFDatePicker-Prefix.pch";
 				INFOPLIST_FILE = "ZFDatePicker/ZFDatePicker-Info.plist";

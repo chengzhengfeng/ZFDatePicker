@@ -8,26 +8,8 @@
 #import <UIKit/UIKit.h>
 #import "NSDate+PGCategory.h"
 #import "UIColor+PGHex.h"
-#import "NSCalendar+PGCurrent.h"
-#import "PGPickerView.h"
-
-typedef NS_ENUM(NSInteger, PGDatePickerMode) {
-    PGDatePickerModeYear, //年
-    PGDatePickerModeYearAndMonth, //年月
-    PGDatePickerModeDate, //年月日
-    PGDatePickerModeDateHourMinute, //年月日时分
-    PGDatePickerModeDateHourMinuteSecond, //年月日时分秒
-    PGDatePickerModeTime, //时分
-    PGDatePickerModeTimeAndSecond, //时分秒
-    PGDatePickerModeMinuteAndSecond, //分秒
-    PGDatePickerModeDateAndTime, //月日周 时分
-};
-
-typedef NS_ENUM(NSUInteger, PGDatePickerType) {
-    PGDatePickerType1,
-    PGDatePickerType2,
-    PGDatePickerType3,
-};
+#import <PGPickerView/PGPickerView.h>
+#import "PGEnumeration.h"
 
 #define PGDatePickerDeprecated(instead) __attribute__((deprecated(instead)))
 
@@ -37,7 +19,6 @@ typedef NS_ENUM(NSUInteger, PGDatePickerType) {
 @property (nonatomic, weak) id<PGDatePickerDelegate> delegate;
 @property (nonatomic, assign) PGDatePickerMode datePickerMode; // default is PGDatePickerModeYear
 @property(nonatomic, assign) PGDatePickerType datePickerType;
-
 /*
  默认是false
  如果设置为true，则不用按下确定按钮也可以得到选中的日期
@@ -60,6 +41,8 @@ typedef NS_ENUM(NSUInteger, PGDatePickerType) {
  如果设置为false，只会显示中间的文字，其他行的文字则不会显示
  */
 @property(nonatomic, assign) BOOL isHiddenMiddleText; // default is true
+
+@property(nonatomic, assign) PGShowUnitType showUnit;
 @property(nonatomic, copy) UIColor *middleTextColor;
 
 @property (nonatomic, strong)UIColor *titleColorForSelectedRow PGDatePickerDeprecated("已过时，请使用textColorOfSelectedRow进行替换");
@@ -80,24 +63,37 @@ typedef NS_ENUM(NSUInteger, PGDatePickerType) {
 @property (nonatomic, strong) NSDate *minimumDate; // specify min/max date range. default is nil. When min > max, the values are ignored. Ignored in countdown timer mode
 @property (nonatomic, strong) NSDate *maximumDate; // default is nil
 
-@property (nonatomic, strong) void(^selectedDate)(NSDateComponents *dateComponents);
+@property (nonatomic, copy) void(^selectedDate)(NSDateComponents *dateComponents);
 
+@property(nonatomic, assign) BOOL isHiddenWheels; // default is true  true -> hidden
+@property(nonatomic, assign) BOOL isCycleScroll; //default is false
+/*
+ 简体中文  language = zh-Hans
+ 繁体中文  language = zh-Hant
+ 英语     language = en
+ */
+@property(nonatomic, copy) NSString *language;
 /**
  相当于确定按钮，执行此方法PGDatePickerDelegate代理方法会得到值
  */
 - (void)tapSelectedHandler;
-/*
- 相当于清除按钮
- */
-- (void)tapCleanSelectedHandler;
 
 - (void)setDate:(NSDate *)date;
 - (void)setDate:(NSDate *)date animated:(BOOL)animated;
+
+//在时分的时候，只显示时
+@property (nonatomic) BOOL isOnlyHourFlag;
+
+//分间隔 默认时1
+@property (nonatomic) NSInteger minuteInterval;
+
+//秒间隔 默认时1
+@property (nonatomic) NSInteger secondInterval;
+
 @end
 
 @protocol PGDatePickerDelegate <NSObject>
 
 - (void)datePicker:(PGDatePicker *)datePicker didSelectDate:(NSDateComponents *)dateComponents;
-- (void)didSelectCleanWithdatePicker:(PGDatePicker *)datePicker;  //后加的
 @end
 

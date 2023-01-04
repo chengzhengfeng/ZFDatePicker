@@ -19,9 +19,10 @@
     }
     return self;
 }
-//
+
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
     CGSize size = [self.content sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17]}];
     self.label.frame = (CGRect){{self.contentView.bounds.size.width / 2 - size.width / 2,
         self.contentView.bounds.size.height / 2 - size.height / 2}, size};
@@ -31,9 +32,9 @@
 - (void)setCurrentDate:(BOOL)currentDate {
     _currentDate = currentDate;
     if (currentDate) {
-        self.label.textColor = [UIColor colorWithHexString:@"#FAD9A2"];
+        self.label.textColor = [UIColor pg_colorWithHexString:@"#FAD9A2"];
     }else {
-        self.label.textColor = [UIColor colorWithHexString:@"#838383"];
+        self.label.textColor = [UIColor pg_colorWithHexString:@"#838383"];
     }
 }
 

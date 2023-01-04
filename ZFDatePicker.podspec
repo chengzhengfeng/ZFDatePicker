@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZFDatePicker'
-  s.version          = '1.0.0'
-  s.summary          = '初始化'
+  s.version          = '1.0.1'
+  s.summary          = '解决获取当前日期有时提前一个月问题'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/chengzhengfeng/ZFDatePicker'
+  s.homepage         = 'https://github.com/chengzhengfeng'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '631781190@qq.com' => '631781190@qq.com' }
@@ -33,5 +33,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'PGPickerView'
 end
