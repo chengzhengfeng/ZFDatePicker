@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZFDatePicker'
-  s.version          = '1.0.2'
-  s.summary          = '解决获取当前日期有时提前一个月问题'
+  s.version          = '1.0.3'
+  s.summary          = '成功解决获取当前日期有时，显示提前一个月的问题'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -33,5 +33,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'PGPickerView'
+  s.dependency 'PGPickerView', '~> 1.3.8'
 end

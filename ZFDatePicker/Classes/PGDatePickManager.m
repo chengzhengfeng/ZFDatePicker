@@ -72,6 +72,13 @@
         [strong_self.datePicker tapSelectedHandler];
         [strong_self cancelButtonHandler];
     };
+    
+    //后加的---程正锋
+    self.headerView.cleanButtonHandlerBlock = ^{
+        __strong PGDatePickManager *strong_self = weak_self;
+        [strong_self.datePicker tapCleanSelectedHandler];
+        [strong_self cancelButtonHandler];
+    };
 }
 
 - (void)cancelButtonHandler {

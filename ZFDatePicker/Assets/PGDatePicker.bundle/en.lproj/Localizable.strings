@@ -19,5 +19,6 @@
 "saturdayString" = " Sat";
 "sundayString" = " Sun";
 "cancelButtonText" = "Cancel";
+"cleanButtonText" = "Cancel";
+
 "confirmButtonText" = "Sure";
-"cleanButtonText" = "Clean";

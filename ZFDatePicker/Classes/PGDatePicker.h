@@ -77,6 +77,12 @@
  相当于确定按钮，执行此方法PGDatePickerDelegate代理方法会得到值
  */
 - (void)tapSelectedHandler;
+/*
+ *相当于清除按钮
+ *后加的--程正锋
+ */
+- (void)tapCleanSelectedHandler;
+
 
 - (void)setDate:(NSDate *)date;
 - (void)setDate:(NSDate *)date animated:(BOOL)animated;
@@ -95,5 +101,7 @@
 @protocol PGDatePickerDelegate <NSObject>
 
 - (void)datePicker:(PGDatePicker *)datePicker didSelectDate:(NSDateComponents *)dateComponents;
+
+- (void)didSelectCleanWithdatePicker:(PGDatePicker *)datePicker;  //后加的---程正锋
 @end
 

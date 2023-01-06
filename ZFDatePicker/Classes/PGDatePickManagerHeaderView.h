@@ -29,4 +29,11 @@ typedef void(^handlerBlock)();
 @property (nonatomic, copy) NSString *confirmButtonText;
 @property (nonatomic, copy) UIFont *confirmButtonFont;
 @property (nonatomic, copy) UIColor *confirmButtonTextColor;
+
+//后加的---程正锋
+@property (nonatomic, weak) UIButton *cleanButton;
+@property (nonatomic, copy) NSString *cleanButtonText;
+@property (nonatomic, copy) UIFont *cleanButtonFont;
+@property (nonatomic, copy) UIColor *cleanButtonTextColor;
+@property (nonatomic, strong)  handlerBlock cleanButtonHandlerBlock;
 @end

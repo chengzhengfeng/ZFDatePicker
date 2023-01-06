@@ -117,6 +117,16 @@ static NSString *const reuseIdentifier = @"PGDatePickerView";
     }
 }
 
+//后加的---程正锋
+- (void)tapCleanSelectedHandler {
+    if (self.autoSelected == false) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectCleanWithdatePicker:)]) {
+            [self.delegate didSelectCleanWithdatePicker:self];
+        }
+    }
+}
+
+
 - (void)selectedDateLogic {
     switch (self.datePickerMode) {
         case PGDatePickerModeYear:

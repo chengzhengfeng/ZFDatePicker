@@ -62,8 +62,15 @@
     CGFloat buttonHeight = 30;
     CGFloat space = 15;
     self.cancelButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    //后加的---程正锋
+    self.cleanButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     self.confirmButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     self.cancelButton.frame = CGRectMake(space,
+                                         (self.bounds.size.height - buttonHeight) / 2,
+                                         buttonWidth,
+                                         buttonHeight);
+    //后加的---程正锋
+    self.cleanButton.frame = CGRectMake(space + buttonWidth,
                                          (self.bounds.size.height - buttonHeight) / 2,
                                          buttonWidth,
                                          buttonHeight);
@@ -85,6 +92,11 @@
                                          (self.bounds.size.height - buttonHeight) / 2,
                                          buttonWidth,
                                          buttonHeight);
+    //后加的---程正锋
+    self.cleanButton.frame = CGRectMake(buttonWidth,
+                                         (self.bounds.size.height - buttonHeight) / 2,
+                                         buttonWidth,
+                                         buttonHeight);
     self.confirmButton.frame = CGRectMake(self.bounds.size.width / 2,
                                           (self.bounds.size.height - buttonHeight) / 2,
                                           buttonWidth,
@@ -98,6 +110,13 @@
     [self.cancelButton setTitle:self.cancelButtonText forState:UIControlStateNormal];
     [self.cancelButton addTarget:self action:@selector(cancelButtonHandler) forControlEvents:UIControlEventTouchUpInside];
     
+    //后加的---程正锋
+    self.cleanButton.titleLabel.font = self.cleanButtonFont;
+    [self.cleanButton setTitleColor:self.cleanButtonTextColor forState:UIControlStateNormal];
+    [self.cleanButton setTitle:self.cleanButtonText forState:UIControlStateNormal];
+    [self.cleanButton addTarget:self action:@selector(cleanButtonHandler) forControlEvents:UIControlEventTouchUpInside];
+    
+    //
     self.confirmButton.titleLabel.font = self.confirmButtonFont;
     [self.confirmButton setTitleColor:self.confirmButtonTextColor forState:UIControlStateNormal];
     [self.confirmButton setTitle:self.confirmButtonText forState:UIControlStateNormal];
@@ -107,6 +126,13 @@
 - (void)cancelButtonHandler {
     if (self.cancelButtonHandlerBlock) {
         self.cancelButtonHandlerBlock();
+    }
+}
+
+//后加的---程正锋
+- (void)cleanButtonHandler {
+    if (self.cleanButtonHandlerBlock) {
+        self.cleanButtonHandlerBlock();
     }
 }
 
@@ -177,6 +203,16 @@
     return _confirmButton;
 }
 
+//后加的---程正锋
+-(UIButton *)cleanButton{
+    if (!_cleanButton) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self addSubview:button];
+        _cleanButton = button;
+    }
+    return _cleanButton;
+}
+
 - (UIButton *)cancelButton {
     if (!_cancelButton) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -207,6 +243,30 @@
     }
     return _cancelButtonTextColor;
 }
+
+/**********后加的---程正锋**********/
+- (NSString *)cleanButtonText {
+    if (!_cleanButtonText) {
+        NSString *cleanButtonText = [NSBundle pg_localizedStringForKey:@"cleanButtonText" language:self.language];
+        _cleanButtonText = cleanButtonText;
+    }
+    return _cleanButtonText;
+}
+
+- (UIFont *)cleanButtonFont {
+    if (!_cleanButtonFont) {
+        _cleanButtonFont = [UIFont systemFontOfSize:18];
+    }
+    return _cleanButtonFont;
+}
+
+- (UIColor *)cleanButtonTextColor {
+    if (!_cleanButtonTextColor) {
+        _cleanButtonTextColor = [UIColor redColor];
+    }
+    return _cleanButtonTextColor;
+}
+/**************************/
 
 - (NSString *)confirmButtonText {
     if (!_confirmButtonText) {
