@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZFDatePicker'
-  s.version          = '1.0.3'
-  s.summary          = '成功解决获取当前日期有时，显示提前一个月的问题'
+  s.version          = '1.0.4'
+  s.summary          = '成功解决获取当前日期有时，显示提前一个月的问题,同时解决国际化问题'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
