@@ -12,7 +12,8 @@
 + (instancetype)safeBundle {
     static NSBundle *bundle = nil;
     if (bundle == nil) {
-        bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[PGDatePicker class]] pathForResource:@"PGDatePicker" ofType:@"bundle"]];
+        bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[PGDatePicker class]] pathForResource:@"ZFDatePicker" ofType:@"bundle"]];
+        bundle = [NSBundle bundleWithPath:[bundle pathForResource:@"PGDatePicker" ofType:@"bundle"]];
     }
     return bundle;
 }
